@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(img/bg.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.container{
+    padding: 10px 10%;
+}
