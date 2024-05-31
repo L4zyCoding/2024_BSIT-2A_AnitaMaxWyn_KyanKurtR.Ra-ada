@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy's Portfolio</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .icon {
+            position: relative;
+            margin: 0 10px;
+            text-align: center;
+            transition: all 0.5s;
+        }
+        .icon .tooltip {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: black;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        .icon:hover .tooltip {
+            opacity: 1;
+            top: -40px;
+        }
+        .icon span {
+            display: block;
+            font-size: 30px;
+            color: #333;
+            transition: all 0.5s;
+        }
+        .icon:hover span {
+            color: #1a73e8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <img src="img/Laz_logo.png" class="logo" alt="Lazy's Logo">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="center-container">
+            <div class="bubble medium bottom">Hello! I'm Kyan Kurt R. Rañada from LazyVille, an aspiring Game Developer!</div>
+        </div>
+    </header>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-me-1">
+                    <img src="img/kyan.jpg" alt="Kyan Kurt R. Rañada" class="profile-pic">
+                </div>
+                <div class="about-me-2">
+                    <h1>About Me</h1>
+                    <p class="description">My name’s Kyan Kurt R. Rañada, 20 years old. I was born in Manga, Oas, Albay. I'm currently taking up a Bachelor's in Information Technology at Bicol University Polangui. My interest in technology is what drives me to learn more and improve my skills as a programmer.</p>
+    
+                    <div class="tab">
+                        <p class="link active-link" onclick="openTab('Skills')">Skills</p>
+                        <p class="link" onclick="openTab('Education')">Education</p>
+                        <p class="link" onclick="openTab('Projects')">Projects</p>
+                    </div>
+                    <div class="content active-tab" id="Skills">
+                        <ul>
+                            <li><span>Web Development.......... </span>lvl2</li>
+                            <li><span>Designing....................... </span>lvl3</li>
+                            <li><span>Coding............................ </span>lvl3</li>
+                            <li><span>Drawing.......................... </span>lvl1</li>
+                        </ul>
+                    </div>
+                    <div class="content" id="Education">
+                        <ul>
+                            <li><span>Elementary:</span><br>Manga Elementary School</li>
+                            <li><span>High School & Senior High School:</span><br>Saban National High School</li>
+                            <li><span>College:</span><br>Bicol University Polangui</li>
+                        </ul>
+                    </div>
+                    <div class="content" id="Projects">
+                        <ul>
+                            <li><span class="project-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></li>
+                        </ul>
+                    </div>                                                     
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <!-- Social Media Icons -->
+    <div class="wrapper">
+        <div class="icon facebook">
+            <div class="tooltip">kyankurtranada</div>
+            <span><i class="fa fa-facebook"></i></span>
+        </div>
+        <div class="icon instagram">
+            <div class="tooltip">code_lazy_</div>
+            <span><i class="fa fa-instagram"></i></span>
+        </div>
+        <div class="icon github">
+            <div class="tooltip">L4zyCoding</div>
+            <span><i class="fa fa-github"></i></span>
+        </div>
+        <div class="icon gmail">
+            <div class="tooltip">kyankurtranada@gmail.com</div>
+            <span><i class="fa fa-envelope"></i></span>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            var i;
+            var x = document.getElementsByClassName("content");
+            var tablinks = document.getElementsByClassName("link");
+            
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.remove("active-tab");
+            }
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-link");
+            }
+            document.getElementById(tabName).classList.add("active-tab");
+            event.currentTarget.classList.add("active-link");
+        }
+
+        // Set the initial active tab
+        document.getElementById("Skills").classList.add("active-tab");
+    </script>
+</body>
+</html>
